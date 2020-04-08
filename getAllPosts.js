@@ -17,7 +17,7 @@ let request = require('request');
 let cheerio = require('cheerio');
 let fs = require('fs');
 
-let REQ_TIMER = 10000; // 30000;
+let REQ_TIMER = 10000;
 let HUB_NUM = 0;
 let basic_data = require('./pubski_list.json');
 
@@ -31,11 +31,10 @@ let requestLoop = setInterval(function () {
     let curr_pub = basic_data[HUB_NUM];
 
     request(curr_pub.post_link, function (error, response, body) {
-        console.log(`hub #${HUB_NUM} - status: ${response && response.statusCode}`);
+        console.log(`\nhub #${HUB_NUM} - status: ${response && response.statusCode}`);
 
         // Feed the response into cheerio. 
         let $ = cheerio.load(body);
-
 
         // A. Get list of all users involved (nodes). 
         let nodes = [{

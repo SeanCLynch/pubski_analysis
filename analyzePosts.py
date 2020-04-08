@@ -5,7 +5,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import csv
 
-NUM_HUBS = 300 #300?
+NUM_HUBS = 300
 
 for idx in range (0, NUM_HUBS):
 
