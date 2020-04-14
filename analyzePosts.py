@@ -19,7 +19,11 @@ for idx in range (0, NUM_HUBS):
     nx.draw_networkx_nodes(graph, pos, node_color=node_colors)
     nx.draw_networkx_labels(graph, pos, font_size=8)
     nx.draw_networkx_edges(graph, pos, edge_color='#8097A4', connectionstyle='arc3,rad=0.2', arrowsize=12)
-    # plt.show()
+
+    # Uncomment this section for a graph every 25 Pubskis.
+    # if ((idx % 25) == 0):
+    #     plt.show()
+    # plt.clf()
 
     # ----------------------------------------------------------------------------------------------
     # 2. Do analytics! 
